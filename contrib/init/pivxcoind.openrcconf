@@ -1,0 +1,26 @@
+# /etc/conf.d/pivxcoind: config file for /etc/init.d/pivxcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/pivxcoin/pivxcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/pivxcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/pivxcoind.pid"
+
+# Where to write pivxcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/pivxcoind"
+
+# User and group to own pivxcoind process
+#BITCOIND_USER="pivxcoin"
+#BITCOIND_GROUP="pivxcoin"
+
+# Path to pivxcoind executable
+#BITCOIND_BIN="/usr/bin/pivxcoind"
+
+# Nice value to run pivxcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

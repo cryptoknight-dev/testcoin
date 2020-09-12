@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pivxcoin
+Comment=Pivxcoin P2P Cryptocurrency
+Exec=pivxcoin-qt %u
+Terminal=false
+Type=Application
+Icon=pivxcoin128
+MimeType=x-scheme-handler/pivxcoin;
+Categories=Office;Finance;
+Name[en_US]=pivxcoin-qt.desktop

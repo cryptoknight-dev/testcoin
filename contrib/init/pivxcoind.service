@@ -1,0 +1,26 @@
+[Unit]
+Description=Pivxcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=pivxcoin
+Group=pivxcoin
+
+Type=forking
+PIDFile=/var/lib/pivxcoind/pivxcoind.pid
+
+ExecStart=/usr/bin/pivxcoind -daemon -pid=/var/lib/pivxcoind/pivxcoind.pid \
+          -conf=/etc/pivxcoin/pivxcoin.conf -datadir=/var/lib/pivxcoind
+
+ExecStop=-/usr/bin/pivxcoin-cli -conf=/etc/pivxcoin/pivxcoin.conf \
+         -datadir=/var/lib/pivxcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
